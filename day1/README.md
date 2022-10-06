@@ -10,9 +10,9 @@ Example:
 `BoO("Bolu") ## Welcome back, Bolu`
 
 To run the script, run
-```
+
+```bash
 javac Console.java
-javac Main.java
+javac Main.java.java
 java Main
 ```
-

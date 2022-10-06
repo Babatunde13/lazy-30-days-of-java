@@ -6,3 +6,10 @@ Write a function that takes in 2 integer parameters. The first parameter, Y, rep
 
 Example:
 `LeapYear(2020,3) ## [2024,2028,2032];`
+
+To run the script, run
+
+```bash
+javac Main.java
+java Main
+```
