@@ -7,3 +7,4 @@ This is a repository for the 30 days of backend challenge. I will be using this 
 1. [Day 1](./day1/Main.java)
 2. [Day 2](./day2/Main.java)
 3. [Day 3](./day3/Main.java)
+4. [Day 4](./day4/Main.java)
