@@ -3,12 +3,11 @@ package day5;
 import java.util.HashMap;
 
 public class DataStore {
-    public HashMap<String, User> users;
-
+    private final String BASE_URL = "https://jsonplaceholder.typicode.com";
+    private HashMap<String, User> users;
 
     public DataStore() {
-        String baseUrl = "https://jsonplaceholder.typicode.com";
-        APIClient<User> apiClient = new APIClient<User>(baseUrl);
+        APIClient<User> apiClient = new APIClient<User>(this.BASE_URL);
         String usersJson = apiClient.get("/users");
         System.out.println(usersJson);
 
