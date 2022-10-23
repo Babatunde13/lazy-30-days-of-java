@@ -12,19 +12,19 @@ public class Main {
 }
 
 final class Fibonacci {
-    int n;
-    int[] fib;
-    HashMap<Integer, Integer> fibMap;
+    long n;
+    long[] fib;
+    HashMap<Long, Long> fibMap;
 
     public Fibonacci(int n) {
         this.n = n;
-        this.fib = new int[n];
-        this.fibMap = new HashMap<Integer, Integer>();
+        this.fib = new long[n];
+        this.fibMap = new HashMap<>();
     }
 
-    public int calculateFibForNumber(int number) {
+    public long calculateFibForNumber(long number) {
         if (number < 0) {
-            throw new IllegalArgumentException("Number must be greater than 0");
+            throw new ArithmeticException("Number must be greater than 0");
         }
 
         if (number == 0 || number == 1) {
@@ -34,7 +34,9 @@ final class Fibonacci {
         if (this.fibMap.containsKey(number)) {
             return this.fibMap.get(number);
         }
-        int fibNumber = calculateFibForNumber(number - 1) + calculateFibForNumber(number - 2);
+
+        long fibNumber = calculateFibForNumber(number - 1) + calculateFibForNumber(number - 2);
+        fibNumber = Math.abs(fibNumber);
         this.fibMap.put(number, fibNumber);
         return fibNumber;
     }
@@ -46,7 +48,8 @@ final class Fibonacci {
     }
 
     public void displayFibonacci() {
-        System.out.print("The first " + n + " Fibonacci numbers are: [");
+        System.out.println("The first " + n + " Fibonacci numbers are: ");
+        System.out.print("[");
         for (int i = 0; i < n; i++) {
             System.out.print(fib[i]);
             if (i < n - 1) {
@@ -56,4 +59,3 @@ final class Fibonacci {
         System.out.println("]");
     }
 }
-
