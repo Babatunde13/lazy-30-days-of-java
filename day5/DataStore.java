@@ -5,11 +5,10 @@ import java.util.HashMap;
 public class DataStore {
     private final String BASE_URL = "https://jsonplaceholder.typicode.com";
     private HashMap<String, User> users;
+    APIClient<User> apiClient;
 
     public DataStore() {
-        APIClient<User> apiClient = new APIClient<User>(this.BASE_URL);
-        String usersJson = apiClient.get("/users");
-        System.out.println(usersJson);
+        this.apiClient = new APIClient<User>(this.BASE_URL);
 
         this.users = new HashMap<String, User>();
     }

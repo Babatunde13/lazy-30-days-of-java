@@ -49,7 +49,7 @@ public class APIClient<T> {
                 System.out.println("Invalid method");
                 throw new Error("Invalid method");
             }
-    
+
             HttpResponse<String> response = httpClient.send(
                 request,
                 HttpResponse.BodyHandlers.ofString()
