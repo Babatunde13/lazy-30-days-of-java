@@ -1,3 +1,5 @@
 *.class
 out/**
 .vscode/
+
+**/target/
