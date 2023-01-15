@@ -1,4 +1,4 @@
-package day5;
+package app.api;
 
 import java.net.URI;
 import java.net.http.HttpClient;

@@ -1,5 +1,3 @@
-package test;
-
 class App implements Cloneable {
     public static void main(String[] args) {
         String example1 = String.format(">%d<", 35);

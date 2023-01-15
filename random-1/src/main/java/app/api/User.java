@@ -1,4 +1,4 @@
-package day5;
+package app.api;
 
 public class User {
     private String _id;
